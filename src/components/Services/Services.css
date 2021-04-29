@@ -8,6 +8,11 @@
   cursor: pointer;
 }
 
+.show_more {
+  justify-content: center;
+  margin-bottom: 0;
+}
+
 .services__item:first-child {
   margin-top: 0;
 }

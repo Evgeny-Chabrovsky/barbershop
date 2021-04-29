@@ -4,9 +4,10 @@
 .container {
   min-width: 320px;
   max-width: 720px;
-  height: 90vh;
+  /* height: 90vh; */
   background-color: #fff;
   margin: 50px auto;
+  padding-bottom: 50px;
 }
 .img {
   padding: 10%;

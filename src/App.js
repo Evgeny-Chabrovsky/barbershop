@@ -8,8 +8,8 @@ function App() {
       <div className="img">
         <img src="images/barbershop.jpg" alt="" />
       </div>
-      {/* <Services /> */}
-      <Barbers />
+      <Services />
+      {/* <Barbers /> */}
     </div>
   );
 }
