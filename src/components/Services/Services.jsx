@@ -1,29 +1,23 @@
 import React from "react";
-import "./Services.css";
+import Cells from "../Cells/Cells";
+
+import Topic from "../Topic/Topic";
+import Image from "../Image/Image";
+
+const services = [
+  { id: 1, title: "Haircut", price: 70 },
+  { id: 2, title: "Long Haircut", price: 100 },
+  { id: 3, title: "Kids Cut", price: 120 },
+  { id: 4, title: "Wet Shave", price: 50 },
+  { id: 5, title: "Head Shave", price: 60 },
+];
 const Services = () => {
   return (
-    <ul className="services">
-      <li className="services__item">
-        <div className="service">Haircat</div>
-        <div className="price">70$</div>
-      </li>
-      <li className="services__item">
-        <div className="service">Long Haircut</div>
-        <div className="price">70$</div>
-      </li>
-      <li className="services__item">
-        <div className="service">Kids Cut</div>
-        <div className="price">70$</div>
-      </li>
-      <li className="services__item">
-        <div className="service">Wet Shave</div>
-        <div className="price">70$</div>
-      </li>
-      <li className="services__item">
-        <div className="service">Head Shave</div>
-        <div className="price">70$</div>
-      </li>
-    </ul>
+    <div>
+      <Image src="images/barbershop.jpg" />
+      <Topic topic="Select a service" />
+      <Cells services={services} />
+    </div>
   );
 };
 
