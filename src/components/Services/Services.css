@@ -1,0 +1,24 @@
+.services__item {
+  padding: 8px 3%;
+  margin: 10px 10%;
+  background-color: #e5e5e5;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.services__item:first-child {
+  margin-top: 0;
+}
+
+.services__item:hover {
+  background-color: aqua;
+}
+
+.price {
+  padding: 2px 7px;
+  background-color: #209bf3;
+  color: #fff;
+  border-radius: 3px;
+}
