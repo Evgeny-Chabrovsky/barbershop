@@ -5,9 +5,17 @@ button {
   background-color: #209bf3;
   border: none;
   border-radius: 3px;
-  margin: 30px auto;
+  margin: 0 auto;
   display: block;
 }
 button:hover {
   background-color: #0e70b7;
+}
+.button {
+  text-align: center;
+  min-width: 320px;
+  max-width: 720px;
+  background-color: #fff;
+  margin: 0 auto;
+  padding-bottom: 30px;
 }

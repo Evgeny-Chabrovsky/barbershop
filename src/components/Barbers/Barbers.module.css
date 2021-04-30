@@ -3,9 +3,14 @@
 } */
 
 .barbers {
+  min-width: 320px;
+  max-width: 720px;
+  margin: 0 auto;
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: #fff;
+  padding-bottom: 30px;
 }
 
 select {
