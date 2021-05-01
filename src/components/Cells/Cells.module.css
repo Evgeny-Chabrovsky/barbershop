@@ -3,7 +3,7 @@
   max-width: 720px;
   background-color: #fff;
   margin: 0 auto;
-  padding-bottom: 40px;
+  padding-bottom: 30px;
 }
 
 .cells__item {
@@ -22,7 +22,7 @@
 
 .show_more {
   justify-content: center;
-  margin-bottom: 0;
+  /* margin-bottom: 0; */
 }
 
 .cells__item:first-child {

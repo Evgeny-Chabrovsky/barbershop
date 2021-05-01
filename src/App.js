@@ -1,8 +1,9 @@
 import "./App.css";
 
-import Services from "./components/Services/Services";
+import Services from "./components/Services";
 import Schedule from "./components/Schedule";
 import Review from "./components/Review";
+import Booking from "./components/Booking";
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       <Services />
       <Schedule />
       <Review />
+      <Booking />
     </>
   );
 }

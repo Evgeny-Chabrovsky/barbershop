@@ -1,8 +1,8 @@
 import React from "react";
-import Cells from "../Cells/Cells";
+import Cells from "./Cells/Cells";
 
-import Topic from "../Topic/Topic";
-import Image from "../Image/Image";
+import Topic from "./Topic/Topic";
+import Image from "./Image/Image";
 
 const services = [
   { id: 1, title: "Haircut", price: 70 },
