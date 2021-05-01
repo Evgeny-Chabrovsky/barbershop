@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/barbersop/static/css/main.53b4987f.chunk.css",
+    "main.js": "/barbersop/static/js/main.c6269a7d.chunk.js",
+    "main.js.map": "/barbersop/static/js/main.c6269a7d.chunk.js.map",
+    "runtime-main.js": "/barbersop/static/js/runtime-main.cfdd168c.js",
+    "runtime-main.js.map": "/barbersop/static/js/runtime-main.cfdd168c.js.map",
+    "static/js/2.c2a02b07.chunk.js": "/barbersop/static/js/2.c2a02b07.chunk.js",
+    "static/js/2.c2a02b07.chunk.js.map": "/barbersop/static/js/2.c2a02b07.chunk.js.map",
+    "index.html": "/barbersop/index.html",
+    "static/css/main.53b4987f.chunk.css.map": "/barbersop/static/css/main.53b4987f.chunk.css.map",
+    "static/js/2.c2a02b07.chunk.js.LICENSE.txt": "/barbersop/static/js/2.c2a02b07.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.cfdd168c.js",
+    "static/js/2.c2a02b07.chunk.js",
+    "static/css/main.53b4987f.chunk.css",
+    "static/js/main.c6269a7d.chunk.js"
+  ]
+}
