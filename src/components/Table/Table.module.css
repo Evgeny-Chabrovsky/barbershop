@@ -29,3 +29,6 @@ ul {
 .cells__item:hover {
   background-color: #e6e6e6a8;
 }
+.dn {
+  display: none;
+}
