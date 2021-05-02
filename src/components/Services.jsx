@@ -14,7 +14,7 @@ const services = [
 const Services = () => {
   return (
     <div>
-      <Image src="images/barbershop.jpg" />
+      <Image />
       <Topic topic="Select a service" />
       <Cells services={services} />
     </div>

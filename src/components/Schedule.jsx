@@ -2,7 +2,6 @@ import React from "react";
 import Image from "./Image/Image";
 import Table from "./Table/Table";
 import Topic from "./Topic/Topic";
-import Button from "./Button/Button";
 import Barbers from "./Barbers/Barbers";
 
 const table = [
@@ -19,7 +18,6 @@ const Schedule = () => {
       <Barbers />
       <Topic topic="Next Available Appointment:" />
       <Table table={table} />
-      <Button value="Continue" />
     </>
   );
 };

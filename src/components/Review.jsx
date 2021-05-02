@@ -4,6 +4,7 @@ import Topic from "./Topic/Topic";
 import Cells from "./Cells/Cells";
 import Table from "./Table/Table";
 import Button from "./Button/Button";
+import { Link } from "react-router-dom";
 
 const services = [{ id: 1, title: "Haircut", price: 70 }]; //то что выбрал пользователь
 
@@ -17,7 +18,9 @@ const Review = () => {
       <Topic topic="Review booking details:" />
       <Cells services={services} />
       <Table table={table} />
-      <Button value="Continue" />
+      <Link to="/booking">
+        <Button value="Continue" />
+      </Link>
     </>
   );
 };
