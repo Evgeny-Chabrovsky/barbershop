@@ -10,19 +10,29 @@
   padding: 8px 3%;
   margin: 10px 40px;
   background-color: #e5e5e5;
-  display: flex;
-  justify-content: space-between;
+  list-style: none;
+  color: black;
+  /* justify-content: space-between; */
+}
+.link {
+  height: 30px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   align-items: center;
+  justify-content: space-between;
   cursor: pointer;
+  text-decoration: none;
 }
 
+.serviceName {
+  color: black;
+}
 .pb1 {
   padding-bottom: 1px;
 }
 
 .show_more {
   justify-content: center;
-  /* margin-bottom: 0; */
 }
 
 .cells__item:first-child {
@@ -40,4 +50,5 @@
   color: #fff;
   border-radius: 3px;
   text-align: center;
+  justify-self: end;
 }

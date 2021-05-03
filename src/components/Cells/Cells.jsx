@@ -1,22 +1,45 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import styles from "./Cells.module.css";
+
 const Cells = (props) => {
   let style = styles.services;
   let route = "/schedule";
 
-  if (props.services.length === 1) {
+  //if object
+  if (Array.isArray(props.services) === false) {
     style = `${styles.services} ${styles.pb1}`;
     route = "/";
-  }
 
+    return (
+      <ul className={style}>
+        <li
+          className={styles.cells__item}
+          key={props.services.id}
+          id={props.services.id}
+          // onClick={(e) => props.handleSelect(e.currentTarget.id)}
+        >
+          <Link to={route} className={styles.link}>
+            <div className={styles.serviceName}>{props.services.title}</div>
+            <div className={styles.price}>{props.services.price}$</div>
+          </Link>
+        </li>
+      </ul>
+    );
+  }
+  //if array
   const content = props.services.map((service) => (
-    <Link to={route} key={service.id}>
-      <li className={styles.cells__item}>
-        <div>{service.title}</div>
+    <li
+      className={styles.cells__item}
+      key={service.id}
+      id={service.id}
+      onClick={(e) => props.handleSelect(e.currentTarget.id)}
+    >
+      <Link to={route} className={styles.link}>
+        <div className={styles.serviceName}>{service.title}</div>
         <div className={styles.price}>{service.price}$</div>
-      </li>
-    </Link>
+      </Link>
+    </li>
   ));
   return <ul className={style}>{content}</ul>;
 };

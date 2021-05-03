@@ -10,17 +10,10 @@ ul {
   padding: 8px 3%;
   margin: 10px 40px;
   background-color: #e5e5e5;
-  display: flex;
-  justify-content: space-between;
   align-items: center;
+  list-style: none;
   cursor: pointer;
 }
-
-.show_more {
-  justify-content: center;
-  align-items: center;
-}
-
 .cells__item:first-child {
   margin-top: 0;
 }
@@ -28,6 +21,24 @@ ul {
 .cells__item:hover {
   background-color: #e6e6e6a8;
 }
+.link {
+  display: flex;
+  height: 30px;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  text-decoration: none;
+}
+.data {
+  color: black;
+}
+
+.show_more {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .dn {
   display: none;
 }
