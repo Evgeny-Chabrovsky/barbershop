@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/barbershop/static/css/main.dc342e26.chunk.css",
-    "main.js": "/barbershop/static/js/main.87bf0d70.chunk.js",
-    "main.js.map": "/barbershop/static/js/main.87bf0d70.chunk.js.map",
+    "main.css": "/barbershop/static/css/main.27cd8fd6.chunk.css",
+    "main.js": "/barbershop/static/js/main.9621536f.chunk.js",
+    "main.js.map": "/barbershop/static/js/main.9621536f.chunk.js.map",
     "runtime-main.js": "/barbershop/static/js/runtime-main.af38de8c.js",
     "runtime-main.js.map": "/barbershop/static/js/runtime-main.af38de8c.js.map",
-    "static/js/2.8c117a11.chunk.js": "/barbershop/static/js/2.8c117a11.chunk.js",
-    "static/js/2.8c117a11.chunk.js.map": "/barbershop/static/js/2.8c117a11.chunk.js.map",
+    "static/js/2.76baad11.chunk.js": "/barbershop/static/js/2.76baad11.chunk.js",
+    "static/js/2.76baad11.chunk.js.map": "/barbershop/static/js/2.76baad11.chunk.js.map",
     "index.html": "/barbershop/index.html",
-    "static/css/main.dc342e26.chunk.css.map": "/barbershop/static/css/main.dc342e26.chunk.css.map",
-    "static/js/2.8c117a11.chunk.js.LICENSE.txt": "/barbershop/static/js/2.8c117a11.chunk.js.LICENSE.txt",
+    "static/css/main.27cd8fd6.chunk.css.map": "/barbershop/static/css/main.27cd8fd6.chunk.css.map",
+    "static/js/2.76baad11.chunk.js.LICENSE.txt": "/barbershop/static/js/2.76baad11.chunk.js.LICENSE.txt",
     "static/media/barbershop.53247800.jpg": "/barbershop/static/media/barbershop.53247800.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.af38de8c.js",
-    "static/js/2.8c117a11.chunk.js",
-    "static/css/main.dc342e26.chunk.css",
-    "static/js/main.87bf0d70.chunk.js"
+    "static/js/2.76baad11.chunk.js",
+    "static/css/main.27cd8fd6.chunk.css",
+    "static/js/main.9621536f.chunk.js"
   ]
 }
