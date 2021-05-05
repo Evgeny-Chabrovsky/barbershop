@@ -17,7 +17,6 @@ const Cells = (props) => {
           className={styles.cells__item}
           key={props.services.id}
           id={props.services.id}
-          // onClick={(e) => props.handleSelect(e.currentTarget.id)}
         >
           <Link to={route} className={styles.link}>
             <div className={styles.serviceName}>{props.services.title}</div>

@@ -1,4 +1,5 @@
 import React from "react";
+import Button from "../Button/Button";
 import styles from "./Form.module.css";
 const Form = () => {
   return (
@@ -12,6 +13,7 @@ const Form = () => {
       />
       <input className={styles.input} type="phone" placeholder="Phone" />
       <input className={styles.input} type="email" placeholder="Email" />
+      <Button value="Booking" />
     </form>
   );
 };

@@ -17,34 +17,66 @@ class App extends Component {
     ],
     table: [
       { id: 0, barber: "Avi", date: "Wednesday, April 28th", time: "17:00" },
-      { id: 1, barber: "Avi", date: "Thursday, April 29th", time: "18:00" },
-      { id: 2, barber: "Gabi", date: "Friday, April 30th", time: "12:00" },
-      { id: 3, barber: "Gabi", date: "Friday, April 30th", time: "13:00" },
-      { id: 4, barber: "Hagai", date: "Wednesday, April 28th", time: "14:00" },
+      { id: 1, barber: "Gabi", date: "Friday, April 30th", time: "12:00" },
+      { id: 2, barber: "Avi", date: "Thursday, April 29th", time: "18:00" },
+      { id: 3, barber: "Hagai", date: "Wednesday, April 28th", time: "14:00" },
+      { id: 4, barber: "Gabi", date: "Friday, April 30th", time: "13:00" },
       { id: 5, barber: "Hagai", date: "Thursday, April 29th", time: "13:00" },
     ],
+
     selectedService: 0,
     selectedDate: 0,
+    selectedBarber: "All",
+    barbers: [],
   };
+  componentDidMount() {
+    this.setState({
+      barbers: this.getBarbers(),
+    });
+  }
+
+  getBarbers() {
+    return [...new Set(this.state.table.map((i) => i.barber))];
+  }
 
   handleSelectService = (id) => {
     this.setState({ selectedService: id });
   };
   handleSelectDate = (id) => {
     this.setState({ selectedDate: id });
-    // console.log(id);
+    console.log(id);
+  };
+
+  handleBarberSelect = (barber) => {
+    console.log(barber);
+    this.setState({ selectedBarber: barber });
+  };
+
+  handleFilter = () => {
+    return this.state.selectedBarber === "All"
+      ? this.state.table
+      : this.state.table.filter((i) => i.barber === this.state.selectedBarber);
   };
 
   render() {
+    // console.log(this.handleFilter);
     return (
       <>
+        {/* <Schedule
+          handleFilter={this.handleFilter}
+          handleSelect={this.handleSelectDate}
+          barbers={this.state.barbers}
+          onBarberSelect={this.handleBarberSelect}
+        /> */}
         <Switch>
           <Route
             path="/schedule"
             render={(props) => (
               <Schedule
-                table={this.state.table}
+                handleFilter={this.handleFilter}
                 handleSelect={this.handleSelectDate}
+                barbers={this.state.barbers}
+                onBarberSelect={this.handleBarberSelect}
               />
             )}
           />
@@ -52,6 +84,8 @@ class App extends Component {
             path="/review"
             render={(props) => (
               <Review
+                handleFilter={this.handleFilter}
+                handleSelect={this.handleSelectDate}
                 selectService={this.state.services[this.state.selectedService]}
                 selectedDate={this.state.table[this.state.selectedDate]}
                 {...props}
@@ -76,17 +110,3 @@ class App extends Component {
 }
 
 export default App;
-
-// function App() {
-//   return (
-//     <Services />
-//     // <Switch>
-//     //   <Route path="/schedule" component={Schedule} />
-//     //   <Route path="/review" component={Review} />
-//     //   <Route path="/booking" component={Booking} />
-//     //   <Route path="/" component={Services} />
-//     // </Switch>
-//   );
-// }
-
-// export default App;

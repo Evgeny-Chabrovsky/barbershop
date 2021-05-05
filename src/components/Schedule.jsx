@@ -8,11 +8,13 @@ const Schedule = (props) => {
   return (
     <>
       <Image src="images/scissors.jpg" />
-      <Barbers />
+      <Barbers barbers={props.barbers} onBarberSelect={props.onBarberSelect} />
       <Topic topic="Next Available Appointment:" />
-      <Table table={props.table} handleSelect={props.handleSelect} />
+      <Table
+        handleFilter={props.handleFilter}
+        handleSelect={props.handleSelect}
+      />
     </>
   );
 };
-
 export default Schedule;

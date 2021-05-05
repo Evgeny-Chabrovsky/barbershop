@@ -9,7 +9,7 @@ const Booking = () => {
       <Image src="images/email.jpg" />
       <Topic topic="Enter your contact information:" />
       <Form />
-      <Button value="Booking" />
+      {/* <Button value="Booking" /> */}
     </>
   );
 };
