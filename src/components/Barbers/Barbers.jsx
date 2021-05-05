@@ -1,4 +1,5 @@
 import React from "react";
+import BackButton from "../BackButton/BackButton";
 import styles from "./Barbers.module.css";
 
 const Barbers = (props) => {

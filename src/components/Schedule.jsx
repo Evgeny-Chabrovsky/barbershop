@@ -9,7 +9,7 @@ const Schedule = (props) => {
     <>
       <Image src="images/scissors.jpg" />
       <Barbers barbers={props.barbers} onBarberSelect={props.onBarberSelect} />
-      <Topic topic="Next Available Appointment:" />
+      <Topic topic="Next Available Appointment:" route={"/"} display={true} />
       <Table
         handleFilter={props.handleFilter}
         handleSelect={props.handleSelect}

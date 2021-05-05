@@ -1,0 +1,14 @@
+.link_style {
+  background-color: #fff; /* margin: 0 auto; */
+  padding-left: 40px;
+}
+.link {
+  color: black;
+  background-color: #e5e5e5;
+  text-decoration: none;
+  padding: 3px 30px;
+  border-radius: 4px;
+}
+.link:hover {
+  background-color: #e6e6e6a8;
+}

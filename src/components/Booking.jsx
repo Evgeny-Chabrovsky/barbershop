@@ -7,7 +7,11 @@ const Booking = () => {
   return (
     <>
       <Image src="images/email.jpg" />
-      <Topic topic="Enter your contact information:" />
+      <Topic
+        topic="Enter your contact information:"
+        display={true}
+        route="/review"
+      />
       <Form />
       {/* <Button value="Booking" /> */}
     </>

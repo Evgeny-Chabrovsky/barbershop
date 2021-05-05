@@ -9,7 +9,7 @@ const Review = (props) => {
   return (
     <>
       <Image src="images/hairbrush.jpg" />
-      <Topic topic="Review booking details:" />
+      <Topic topic="Review booking details:" route="/schedule" display={true} />
       <Cells services={props.selectService} />
       <Table
         handleFilter={props.handleFilter}

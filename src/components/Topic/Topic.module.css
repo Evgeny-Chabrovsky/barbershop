@@ -1,8 +1,19 @@
+.container {
+  min-width: 320px;
+  max-width: 720px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  background-color: #fff;
+  padding-bottom: 30px;
+}
+
 .topic {
   text-align: center;
   min-width: 320px;
   max-width: 720px;
   background-color: #fff;
   margin: 0 auto;
-  padding-bottom: 15px;
+  grid-column: 2/3;
 }

@@ -8,7 +8,7 @@ const Services = (props) => {
   return (
     <div>
       <Image />
-      <Topic topic="Select a service" />
+      <Topic topic="Select a service" display={false} route="/" />
       <Cells services={props.services} handleSelect={props.handleSelect} />
     </div>
   );
