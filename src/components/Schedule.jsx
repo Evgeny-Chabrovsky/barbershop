@@ -3,6 +3,7 @@ import Image from "./Image/Image";
 import Table from "./Table/Table";
 import Topic from "./Topic/Topic";
 import Barbers from "./Barbers/Barbers";
+import Cells from "./Cells/Cells";
 
 const Schedule = (props) => {
   return (
@@ -10,6 +11,7 @@ const Schedule = (props) => {
       <Image src="images/scissors.jpg" />
       <Barbers barbers={props.barbers} onBarberSelect={props.onBarberSelect} />
       <Topic topic="Next Available Appointment:" route={"/"} display={true} />
+      <Cells services={props.selectService} />
       <Table
         handleFilter={props.handleFilter}
         handleSelect={props.handleSelect}

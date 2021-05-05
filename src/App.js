@@ -77,6 +77,7 @@ class App extends Component {
                 handleSelect={this.handleSelectDate}
                 barbers={this.state.barbers}
                 onBarberSelect={this.handleBarberSelect}
+                selectService={this.state.services[this.state.selectedService]}
               />
             )}
           />

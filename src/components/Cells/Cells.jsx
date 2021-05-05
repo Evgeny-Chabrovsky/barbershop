@@ -14,14 +14,14 @@ const Cells = (props) => {
     return (
       <ul className={style}>
         <li
-          className={styles.cells__item}
+          className={styles.cells__item_selected}
           key={props.services.id}
           id={props.services.id}
         >
-          <Link to={route} className={styles.link}>
+          <div className={styles.link}>
             <div className={styles.serviceName}>{props.services.title}</div>
             <div className={styles.price}>{props.services.price}$</div>
-          </Link>
+          </div>
         </li>
       </ul>
     );
