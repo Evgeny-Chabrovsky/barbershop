@@ -7,22 +7,22 @@
 }
 
 .cells__item {
-  padding: 15px 3%;
+  padding: 8px 3%;
   margin: 10px 40px;
   background-color: #e5e5e5;
   list-style: none;
   color: black;
   cursor: pointer;
 }
-.cells__item_selected {
+/* .cells__item_selected {
   display: grid;
   grid-row: 30px auto;
-  padding: 15px 3%;
+  padding: 8px 3%;
   margin: 0 40px 10px;
   background-color: #d7f5cc;
   list-style: none;
   color: black;
-}
+} */
 .link {
   height: 30px;
   display: grid;
@@ -69,14 +69,4 @@
 }
 .question:hover {
   transform: scale(1.2);
-  /* animation: close 2s linear 0s infinite; */
 }
-
-/* @keyframes close {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  } */
-/* }  */

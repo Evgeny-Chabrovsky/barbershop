@@ -1,5 +1,4 @@
 import React from "react";
-import BackButton from "../BackButton/BackButton";
 import styles from "./Barbers.module.css";
 
 const Barbers = (props) => {
@@ -7,7 +6,7 @@ const Barbers = (props) => {
 
   return (
     <div className={styles.barbers}>
-      <p id={styles.selectBarber}>select Barber:</p>
+      <p id={styles.selectBarber}>Choose Barber:</p>
       <form>
         <select
           id="barber"

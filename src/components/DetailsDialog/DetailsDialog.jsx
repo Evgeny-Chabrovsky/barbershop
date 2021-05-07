@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./DetailsDialog.module.css";
-import img from "../../images/sheep.jpg";
+import img from "../../images/haircut.jpg";
 
 const DetailsDialog = () => {
   return (

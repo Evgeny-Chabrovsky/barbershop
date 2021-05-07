@@ -17,31 +17,6 @@ const Cells = (props) => {
 
   let style = styles.services;
   let route = "/schedule";
-
-  // //if object
-  // if (Array.isArray(props.services) === false) {
-  //   style = `${styles.services} ${styles.pb1}`;
-  //   route = "/";
-
-  //   return (
-  //     <ul className={style}>
-  //       <li
-  //         className={styles.cells__item_selected}
-  //         key={props.services.id}
-  //         id={props.services.id}
-  //       >
-  //         <div className={styles.link}>
-  //           <div className={styles.serviceName}>{props.services.title}</div>
-  //           <div className={styles.price}>{props.services.price}$</div>
-  //           <div className={styles.details} onClick={(e) => toggle(e)}>
-  //             <FontAwesomeIcon icon={faQuestion} className={styles.question} />
-  //           </div>
-  //         </div>
-  //       </li>
-  //     </ul>
-  //   );
-  // }
-  //if array
   const content = props.services.map((service, index) => (
     <li
       className={styles.cells__item}

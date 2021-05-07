@@ -1,10 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 import Image from "./Image/Image";
 import Table from "./Table/Table";
 import Topic from "./Topic/Topic";
 import Barbers from "./Barbers/Barbers";
 import Cells from "./Cells/Cells";
-import DetailsDialog from "./DetailsDialog/DetailsDialog";
 
 const Schedule = (props) => {
   return (

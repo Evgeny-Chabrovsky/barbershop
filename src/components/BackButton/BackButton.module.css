@@ -12,3 +12,8 @@
 .link:hover {
   background-color: #e6e6e6a8;
 }
+@media screen and (max-width: 450px) {
+  .link_style {
+    margin-bottom: 30px;
+  }
+}

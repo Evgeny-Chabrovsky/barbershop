@@ -1,9 +1,11 @@
 .madal_content {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   text-align: justify;
   margin-top: 15px;
 }
 
 p {
-  margin-left: 3%;
+  max-width: 300px;
 }
