@@ -1,19 +1,13 @@
 import React from "react";
 import Button from "../Button/Button";
 import styles from "./Form.module.css";
-const Form = () => {
+const Form = (props) => {
   return (
-    <form className={styles.form} /* onSubmit={this.handleSubmit} */>
-      <input
-        className={styles.input}
-        type="text"
-        // value={this.state.value}
-        /* onChange={this.handleChange} */
-        placeholder="Name"
-      />
+    <form className={styles.form}>
+      <input className={styles.input} type="text" placeholder="Name" />
       <input className={styles.input} type="phone" placeholder="Phone" />
       <input className={styles.input} type="email" placeholder="Email" />
-      <Button value="Booking" />
+      <Button value="Booking" setActive={props.setActive} isRoute={false} />
     </form>
   );
 };

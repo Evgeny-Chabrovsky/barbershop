@@ -24,7 +24,6 @@ class App extends Component {
       { id: 5, barber: "Gabi", date: "Friday, April 30th", time: "13:00" },
     ],
 
-    // selectedService: 0,
     selectedService: [],
     selectedDate: 0,
     selectedBarber: "All",
@@ -42,8 +41,6 @@ class App extends Component {
 
   handleSelectService = (id) => {
     this.setState({ selectedService: [this.state.services[id]] });
-    // console.log(this.state.selectedService);
-    // console.log("this.setState.selectedService");
   };
   handleSelectDate = (id) => {
     this.setState({ selectedDate: id });
@@ -62,22 +59,8 @@ class App extends Component {
   };
 
   render() {
-    console.log(this.state.selectedService);
-    // console.log(this.handleFilter);
     return (
       <>
-        {/* <Services
-          services={this.state.services}
-          handleSelect={this.handleSelectService}
-        />
-        <Schedule
-          handleFilter={this.handleFilter}
-          handleSelect={this.handleSelectDate}
-          barbers={this.state.barbers}
-          onBarberSelect={this.handleBarberSelect}
-          selectedService={this.state.selectedService}
-        /> */}
-
         <Switch>
           <Route
             path="/schedule"
@@ -103,7 +86,7 @@ class App extends Component {
               />
             )}
           />
-          <Route path="/booking" component={Booking} />
+          <Route path="/booking" render={(props) => <Booking />} />
           <Route
             path="/"
             render={(props) => (

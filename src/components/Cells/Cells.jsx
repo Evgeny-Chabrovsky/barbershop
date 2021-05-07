@@ -28,10 +28,7 @@ const Cells = (props) => {
           : (e) => props.handleSelect(e.currentTarget.id)
       }
     >
-      <Link
-        to={route}
-        className={styles.link} /* onClick={() => toggle(index)} */
-      >
+      <Link to={route} className={styles.link}>
         <div className={styles.serviceName}>{service.title}</div>
         <div className={styles.price}>{service.price}$</div>
         <div className={styles.details} onClick={(e) => toggle(index, e)}>

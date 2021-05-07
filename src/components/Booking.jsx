@@ -1,9 +1,11 @@
-import React from "react";
-import Button from "./Button/Button";
+import React, { useState } from "react";
+
 import Form from "./Form/Form";
 import Image from "./Image/Image";
+import Modal from "./Modal/Modal";
 import Topic from "./Topic/Topic";
 const Booking = () => {
+  const [modalActive, setModalActive] = useState(false);
   return (
     <>
       <Image src="images/email.jpg" />
@@ -12,8 +14,8 @@ const Booking = () => {
         display={true}
         route="/review"
       />
-      <Form />
-      {/* <Button value="Booking" /> */}
+      <Form setActive={setModalActive} />
+      <Modal active={modalActive} setActive={setModalActive} />
     </>
   );
 };

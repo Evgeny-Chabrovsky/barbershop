@@ -16,7 +16,7 @@ const Review = (props) => {
         selectedDate={props.selectedDate}
       />
 
-      <Button value="Continue" route="/booking" />
+      <Button value="Continue" route="/booking" isRoute={true} />
     </>
   );
 };

@@ -7,9 +7,13 @@ const Button = (props) => {
   function handleClick() {
     history.push(props.route);
   }
+
   return (
     <div className={styles.button}>
-      <button type="button" onClick={handleClick}>
+      <button
+        type="button"
+        onClick={props.isRoute ? handleClick : () => props.setActive(true)}
+      >
         {props.value}
       </button>
     </div>
