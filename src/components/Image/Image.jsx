@@ -1,7 +1,6 @@
 import React from "react";
 import styles from "./Image.module.css";
 import img from "../../images/barbershop.jpg";
-console.log(img);
 
 const Image = () => {
   return (

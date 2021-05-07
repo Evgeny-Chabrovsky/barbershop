@@ -1,46 +1,76 @@
-import React from "react";
+import React, { useState } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faQuestion } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
+import DetailsDialog from "../DetailsDialog/DetailsDialog";
 import styles from "./Cells.module.css";
 
 const Cells = (props) => {
+  const [clicked, setClicked] = useState(false);
+  const toggle = (index, e) => {
+    e.preventDefault();
+    if (clicked === index) {
+      return setClicked(null);
+    }
+    setClicked(index);
+  };
+
   let style = styles.services;
   let route = "/schedule";
 
-  //if object
-  if (Array.isArray(props.services) === false) {
-    style = `${styles.services} ${styles.pb1}`;
-    route = "/";
+  // //if object
+  // if (Array.isArray(props.services) === false) {
+  //   style = `${styles.services} ${styles.pb1}`;
+  //   route = "/";
 
-    return (
-      <ul className={style}>
-        <li
-          className={styles.cells__item_selected}
-          key={props.services.id}
-          id={props.services.id}
-        >
-          <div className={styles.link}>
-            <div className={styles.serviceName}>{props.services.title}</div>
-            <div className={styles.price}>{props.services.price}$</div>
-          </div>
-        </li>
-      </ul>
-    );
-  }
+  //   return (
+  //     <ul className={style}>
+  //       <li
+  //         className={styles.cells__item_selected}
+  //         key={props.services.id}
+  //         id={props.services.id}
+  //       >
+  //         <div className={styles.link}>
+  //           <div className={styles.serviceName}>{props.services.title}</div>
+  //           <div className={styles.price}>{props.services.price}$</div>
+  //           <div className={styles.details} onClick={(e) => toggle(e)}>
+  //             <FontAwesomeIcon icon={faQuestion} className={styles.question} />
+  //           </div>
+  //         </div>
+  //       </li>
+  //     </ul>
+  //   );
+  // }
   //if array
-  const content = props.services.map((service) => (
+  const content = props.services.map((service, index) => (
     <li
       className={styles.cells__item}
       key={service.id}
       id={service.id}
-      onClick={(e) => props.handleSelect(e.currentTarget.id)}
+      onClick={
+        props.services.length === 1
+          ? undefined
+          : (e) => props.handleSelect(e.currentTarget.id)
+      }
     >
-      <Link to={route} className={styles.link}>
+      <Link
+        to={route}
+        className={styles.link} /* onClick={() => toggle(index)} */
+      >
         <div className={styles.serviceName}>{service.title}</div>
         <div className={styles.price}>{service.price}$</div>
+        <div className={styles.details} onClick={(e) => toggle(index, e)}>
+          <FontAwesomeIcon icon={faQuestion} className={styles.question} />
+        </div>
       </Link>
+      {clicked === index ? <DetailsDialog /> : null}
     </li>
   ));
-  return <ul className={style}>{content}</ul>;
+  return (
+    <>
+      <ul className={style}>{content}</ul>
+    </>
+  );
 };
 
 export default Cells;

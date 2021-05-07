@@ -7,7 +7,7 @@
 }
 
 .cells__item {
-  padding: 8px 3%;
+  padding: 15px 3%;
   margin: 10px 40px;
   background-color: #e5e5e5;
   list-style: none;
@@ -15,7 +15,9 @@
   cursor: pointer;
 }
 .cells__item_selected {
-  padding: 8px 3%;
+  display: grid;
+  grid-row: 30px auto;
+  padding: 15px 3%;
   margin: 0 40px 10px;
   background-color: #d7f5cc;
   list-style: none;
@@ -24,10 +26,13 @@
 .link {
   height: 30px;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 80% 10% 5%;
   align-items: center;
   justify-content: space-between;
   text-decoration: none;
+}
+.details {
+  justify-self: end;
 }
 
 .serviceName {
@@ -58,3 +63,20 @@
   text-align: center;
   justify-self: end;
 }
+.question {
+  cursor: pointer;
+  color: black;
+}
+.question:hover {
+  transform: scale(1.2);
+  /* animation: close 2s linear 0s infinite; */
+}
+
+/* @keyframes close {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  } */
+/* }  */

@@ -1,0 +1,6 @@
+.Services {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  box-shadow: 2px 10px 35px 1px rgba(153, 153, 153, 0.3);
+}

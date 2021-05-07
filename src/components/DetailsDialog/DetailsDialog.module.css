@@ -1,0 +1,9 @@
+.madal_content {
+  display: flex;
+  text-align: justify;
+  margin-top: 15px;
+}
+
+p {
+  margin-left: 3%;
+}

@@ -24,7 +24,8 @@ class App extends Component {
       { id: 5, barber: "Hagai", date: "Thursday, April 29th", time: "13:00" },
     ],
 
-    selectedService: 0,
+    // selectedService: 0,
+    selectedService: [],
     selectedDate: 0,
     selectedBarber: "All",
     barbers: [],
@@ -40,7 +41,9 @@ class App extends Component {
   }
 
   handleSelectService = (id) => {
-    this.setState({ selectedService: id });
+    this.setState({ selectedService: [this.state.services[id]] });
+    // console.log(this.state.selectedService);
+    // console.log("this.setState.selectedService");
   };
   handleSelectDate = (id) => {
     this.setState({ selectedDate: id });
@@ -59,15 +62,22 @@ class App extends Component {
   };
 
   render() {
+    console.log(this.state.selectedService);
     // console.log(this.handleFilter);
     return (
       <>
-        {/* <Schedule
+        {/* <Services
+          services={this.state.services}
+          handleSelect={this.handleSelectService}
+        />
+        <Schedule
           handleFilter={this.handleFilter}
           handleSelect={this.handleSelectDate}
           barbers={this.state.barbers}
           onBarberSelect={this.handleBarberSelect}
+          selectedService={this.state.selectedService}
         /> */}
+
         <Switch>
           <Route
             path="/schedule"
@@ -77,7 +87,7 @@ class App extends Component {
                 handleSelect={this.handleSelectDate}
                 barbers={this.state.barbers}
                 onBarberSelect={this.handleBarberSelect}
-                selectService={this.state.services[this.state.selectedService]}
+                selectedService={this.state.selectedService}
               />
             )}
           />
@@ -87,7 +97,7 @@ class App extends Component {
               <Review
                 handleFilter={this.handleFilter}
                 handleSelect={this.handleSelectDate}
-                selectService={this.state.services[this.state.selectedService]}
+                selectedService={this.state.selectedService}
                 selectedDate={this.state.table[this.state.selectedDate]}
                 {...props}
               />

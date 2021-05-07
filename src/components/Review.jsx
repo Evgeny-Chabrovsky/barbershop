@@ -10,7 +10,7 @@ const Review = (props) => {
     <>
       <Image src="images/hairbrush.jpg" />
       <Topic topic="Review booking details:" route="/schedule" display={true} />
-      <Cells services={props.selectService} />
+      <Cells services={props.selectedService} />
       <Table
         handleFilter={props.handleFilter}
         selectedDate={props.selectedDate}
