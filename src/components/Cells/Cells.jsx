@@ -15,7 +15,6 @@ const Cells = (props) => {
     setClicked(index);
   };
 
-  let style = styles.services;
   let route = "/schedule";
   const content = props.services.map((service, index) => (
     <li
@@ -35,12 +34,12 @@ const Cells = (props) => {
           <FontAwesomeIcon icon={faQuestion} className={styles.question} />
         </div>
       </Link>
-      {clicked === index ? <DetailsDialog /> : null}
+      {clicked === index ? <DetailsDialog image={service.image} /> : null}
     </li>
   ));
   return (
     <>
-      <ul className={style}>{content}</ul>
+      <ul className={styles.services}>{content}</ul>
     </>
   );
 };

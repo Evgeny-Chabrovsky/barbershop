@@ -5,15 +5,20 @@ import Schedule from "./components/Schedule";
 import Review from "./components/Review";
 import Booking from "./components/Booking";
 import { Route, Switch } from "react-router";
+import haircut from "./images/haircut.jpg";
+import longhaircut from "./images/longhaircut.jpg";
+import kidscut from "./images/kidscut.jpg";
+import wetshave from "./images/wetshave.jpg";
+import headshave from "./images/headshave.jpg";
 
 class App extends Component {
   state = {
     services: [
-      { id: 0, title: "Haircut", price: 70 },
-      { id: 1, title: "Long Haircut", price: 100 },
-      { id: 2, title: "Kids Cut", price: 300 },
-      { id: 3, title: "Wet Shave", price: 50 },
-      { id: 4, title: "Head Shave", price: 10 },
+      { id: 0, title: "Haircut", price: 70, image: haircut },
+      { id: 1, title: "Long Haircut", price: 100, image: longhaircut },
+      { id: 2, title: "Kids Cut", price: 300, image: kidscut },
+      { id: 3, title: "Wet Shave", price: 50, image: wetshave },
+      { id: 4, title: "Head Shave", price: 10, image: headshave },
     ],
     table: [
       { id: 0, barber: "Hagai", date: "Wednesday, April 28th", time: "14:00" },
@@ -59,6 +64,7 @@ class App extends Component {
   };
 
   render() {
+    console.log(this.state.services);
     return (
       <>
         <Switch>

@@ -1,12 +1,12 @@
 import React from "react";
 import styles from "./DetailsDialog.module.css";
-import img from "../../images/haircut.jpg";
 
-const DetailsDialog = () => {
+const DetailsDialog = (props) => {
+  console.log(props);
   return (
     <div className={styles.madal_content}>
       <div>
-        <img src={img} alt="" />
+        <img src={props.image} alt="" />
       </div>
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum quaerat
