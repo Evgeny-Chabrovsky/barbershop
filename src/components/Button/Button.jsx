@@ -10,10 +10,7 @@ const Button = (props) => {
 
   return (
     <div className={styles.button}>
-      <button
-        type="button"
-        onClick={props.isRoute ? handleClick : () => props.setActive(true)}
-      >
+      <button type="submit" onClick={props.isRoute ? handleClick : undefined}>
         {props.value}
       </button>
     </div>
