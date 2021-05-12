@@ -17,8 +17,8 @@ const Barbers = (props) => {
         >
           <option value="all">All</option>
           {barbers.map((barber, index) => (
-            <option key={index} value={barber}>
-              {barber}
+            <option key={index} value={barber.name}>
+              {barber.name}
             </option>
           ))}
         </select>

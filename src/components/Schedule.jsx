@@ -15,6 +15,7 @@ const Schedule = (props) => {
       <Table
         handleFilter={props.handleFilter}
         handleSelect={props.handleSelect}
+        barbers={props.barbers}
       />
     </>
   );

@@ -21,7 +21,10 @@ const Table = (props) => {
           className={styles.cells__item}
         >
           <Link to={route} className={styles.link}>
-            <div className={styles.data}>{props.selectedDate.barber}</div>
+            <div className={styles.data}>
+              <div>img</div>
+              {props.selectedDate.barber}
+            </div>
             <div className={styles.data}>{props.selectedDate.date}</div>
             <div className={styles.data}>{props.selectedDate.time}</div>
           </Link>
@@ -38,7 +41,19 @@ const Table = (props) => {
       onClick={(e) => props.handleSelect(e.currentTarget.id)}
     >
       <Link to={route} className={styles.link}>
-        <div className={styles.data}>{item.barber}</div>
+        <div className={styles.data}>
+          {props.barbers.map((i) => {
+            if (i.name === item.barber) {
+              return (
+                <div>
+                  <img src={i.img} alt="" />
+                </div>
+              );
+            }
+          })}
+
+          {item.barber}
+        </div>
         <div className={styles.data}>{item.date}</div>
         <div className={styles.data}>{item.time}</div>
       </Link>

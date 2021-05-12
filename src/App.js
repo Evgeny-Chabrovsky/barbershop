@@ -10,6 +10,9 @@ import longhaircut from "./images/longhaircut.jpg";
 import kidscut from "./images/kidscut.jpg";
 import wetshave from "./images/wetshave.jpg";
 import headshave from "./images/headshave.jpg";
+import avi from "./images/avi.jpg";
+import gabi from "./images/gabi.jpg";
+import hagai from "./images/hagai.jpg";
 
 class App extends Component {
   state = {
@@ -32,17 +35,21 @@ class App extends Component {
     selectedService: [],
     selectedDate: 0,
     selectedBarber: "All",
-    barbers: [],
+    barbers: [
+      { name: "Avi", img: avi },
+      { name: "Gabi", img: gabi },
+      { name: "Hagai", img: hagai },
+    ],
   };
-  componentDidMount() {
-    this.setState({
-      barbers: this.getBarbers(),
-    });
-  }
+  // componentDidMount() {
+  //   this.setState({
+  //     barbers: this.getBarbers(),
+  //   });
+  // }
 
-  getBarbers() {
-    return [...new Set(this.state.table.map((i) => i.barber))];
-  }
+  // getBarbers() {
+  //   return [...new Set(this.state.table.map((i) => i.barber))];
+  // }
 
   handleSelectService = (id) => {
     this.setState({ selectedService: [this.state.services[id]] });
@@ -64,7 +71,7 @@ class App extends Component {
   };
 
   render() {
-    console.log(this.state.services);
+    console.log(this.state.barbers);
     return (
       <>
         <Switch>

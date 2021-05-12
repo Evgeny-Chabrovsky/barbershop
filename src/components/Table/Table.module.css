@@ -30,7 +30,18 @@ ul {
   text-decoration: none;
 }
 .data {
+  display: flex;
+  align-items: center;
   color: black;
+}
+.data :first-child {
+  margin-right: 10px;
+  width: 30px;
+  height: 30px;
+  border-radius: 5px;
+}
+.data :first-child:hover {
+  transform: scale(2);
 }
 
 .show_more {
