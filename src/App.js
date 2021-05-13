@@ -30,16 +30,25 @@ class App extends Component {
       { id: 3, barber: "Avi", date: "Thursday, April 29th", time: "18:00" },
       { id: 4, barber: "Gabi", date: "Friday, April 30th", time: "12:00" },
       { id: 5, barber: "Gabi", date: "Friday, April 30th", time: "13:00" },
+      { id: 6, barber: "Hagai", date: "Saturday, May 1th", time: "11:00" },
+      { id: 7, barber: "Avi", date: "Saturday, May 1th", time: "12:00" },
+      { id: 8, barber: "Hagai", date: "Saturday, May 1th", time: "14:00" },
+      { id: 9, barber: "Avi", date: "Saturday, May 1th", time: "15:00" },
+      { id: 10, barber: "Gabi", date: "Saturday, May 1th", time: "15:00" },
+      { id: 11, barber: "Gabi", date: "Saturday, May 1th", time: "16:00" },
+      { id: 12, barber: "Avi", date: "Saturday, May 1th", time: "16:00" },
     ],
 
-    selectedService: [],
-    selectedDate: [],
-    selectedBarber: "All",
     barbers: [
       { name: "Avi", img: avi },
       { name: "Gabi", img: gabi },
       { name: "Hagai", img: hagai },
     ],
+    selectedService: [],
+    selectedDate: [],
+    itemsToShowDate: 4,
+    stepToShowDate: 43,
+    selectedBarber: "All",
   };
   // componentDidMount() {
   //   this.setState({
@@ -51,15 +60,22 @@ class App extends Component {
   //   return [...new Set(this.state.table.map((i) => i.barber))];
   // }
 
+  handleDateShowMore = () => {
+    let items = this.state.itemsToShowDate + this.state.stepToShowDate;
+    this.state.table.length <= items
+      ? this.setState({ itemsToShowDate: this.state.table.length })
+      : this.setState({ itemsToShowDate: items });
+    // console.log(this.state.itemsToShowDate);
+  };
+
   handleSelectService = (id) => {
     this.setState({ selectedService: [this.state.services[id]] });
   };
   handleSelectDate = (id) => {
     this.setState({ selectedDate: [this.state.table[id]] });
-    console.log(this.state.selectedDate);
   };
 
-  handleBarberSelect = (barber) => {
+  handleSelectBarber = (barber) => {
     console.log(barber);
     this.setState({ selectedBarber: barber });
   };
@@ -71,7 +87,6 @@ class App extends Component {
   };
 
   render() {
-    console.log(this.state.selectedDate);
     return (
       <>
         <Switch>
@@ -79,11 +94,14 @@ class App extends Component {
             path="/schedule"
             render={(props) => (
               <Schedule
+                handleDateShowMore={this.handleDateShowMore}
                 handleFilter={this.handleFilter}
                 handleSelect={this.handleSelectDate}
-                barbers={this.state.barbers}
-                onBarberSelect={this.handleBarberSelect}
+                onSelectBarber={this.handleSelectBarber}
                 selectedService={this.state.selectedService}
+                selectedBarber={this.state.selectedBarber}
+                barbers={this.state.barbers}
+                itemsToShowDate={this.state.itemsToShowDate}
               />
             )}
           />

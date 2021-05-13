@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./Barbers.module.css";
 
 const Barbers = (props) => {
-  const { barbers, onBarberSelect } = props;
+  const { barbers, onSelectBarber } = props;
 
   return (
     <div className={styles.barbers}>
@@ -12,7 +12,7 @@ const Barbers = (props) => {
           id="barber"
           name="barber"
           onChange={(e) => {
-            onBarberSelect(e.target.options[e.target.selectedIndex].text);
+            onSelectBarber(e.target.options[e.target.selectedIndex].text);
           }}
         >
           <option value="all">All</option>
