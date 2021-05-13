@@ -15,7 +15,6 @@ const Cells = (props) => {
     setClicked(index);
   };
 
-  let route = "/schedule";
   const content = props.services.map((service, index) => (
     <li
       className={styles.cells__item}
@@ -27,7 +26,7 @@ const Cells = (props) => {
           : (e) => props.handleSelect(e.currentTarget.id)
       }
     >
-      <Link to={route} className={styles.link}>
+      <Link to={props.route} className={styles.link}>
         <div className={styles.serviceName}>{service.title}</div>
         <div className={styles.price}>{service.price}$</div>
         <div className={styles.details} onClick={(e) => toggle(index, e)}>

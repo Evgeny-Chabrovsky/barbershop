@@ -33,7 +33,7 @@ class App extends Component {
     ],
 
     selectedService: [],
-    selectedDate: 0,
+    selectedDate: [],
     selectedBarber: "All",
     barbers: [
       { name: "Avi", img: avi },
@@ -55,8 +55,8 @@ class App extends Component {
     this.setState({ selectedService: [this.state.services[id]] });
   };
   handleSelectDate = (id) => {
-    this.setState({ selectedDate: id });
-    console.log(id);
+    this.setState({ selectedDate: [this.state.table[id]] });
+    console.log(this.state.selectedDate);
   };
 
   handleBarberSelect = (barber) => {
@@ -71,7 +71,7 @@ class App extends Component {
   };
 
   render() {
-    console.log(this.state.barbers);
+    console.log(this.state.selectedDate);
     return (
       <>
         <Switch>
@@ -93,8 +93,9 @@ class App extends Component {
               <Review
                 handleFilter={this.handleFilter}
                 handleSelect={this.handleSelectDate}
+                barbers={this.state.barbers}
                 selectedService={this.state.selectedService}
-                selectedDate={this.state.table[this.state.selectedDate]}
+                selectedDate={this.state.selectedDate}
                 {...props}
               />
             )}

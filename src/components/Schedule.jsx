@@ -11,11 +11,16 @@ const Schedule = (props) => {
       <Image src="images/scissors.jpg" />
       <Barbers barbers={props.barbers} onBarberSelect={props.onBarberSelect} />
       <Topic topic="Next Available Appointment:" route={"/"} display={true} />
-      <Cells services={props.selectedService} />
+      <Cells
+        services={props.selectedService}
+        handleSelect={props.handleSelect}
+        route="/schedule"
+      />
       <Table
         handleFilter={props.handleFilter}
         handleSelect={props.handleSelect}
         barbers={props.barbers}
+        route="/review"
       />
     </>
   );

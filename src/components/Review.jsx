@@ -10,10 +10,17 @@ const Review = (props) => {
     <>
       <Image src="images/hairbrush.jpg" />
       <Topic topic="Review booking details:" route="/schedule" display={true} />
-      <Cells services={props.selectedService} />
+      <Cells
+        services={props.selectedService}
+        handleSelect={props.handleSelect}
+        route="/review"
+      />
       <Table
+        handleSelect={props.handleSelect}
         handleFilter={props.handleFilter}
         selectedDate={props.selectedDate}
+        barbers={props.barbers}
+        route="/review"
       />
 
       <Button value="Continue" route="/booking" isRoute={true} />
