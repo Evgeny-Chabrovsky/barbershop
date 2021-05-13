@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/barbershop/static/css/main.1902de1a.chunk.css",
-    "main.js": "/barbershop/static/js/main.5f35a065.chunk.js",
-    "main.js.map": "/barbershop/static/js/main.5f35a065.chunk.js.map",
+    "main.js": "/barbershop/static/js/main.748d6ed7.chunk.js",
+    "main.js.map": "/barbershop/static/js/main.748d6ed7.chunk.js.map",
     "runtime-main.js": "/barbershop/static/js/runtime-main.af38de8c.js",
     "runtime-main.js.map": "/barbershop/static/js/runtime-main.af38de8c.js.map",
     "static/js/2.db108b18.chunk.js": "/barbershop/static/js/2.db108b18.chunk.js",
@@ -20,6 +20,6 @@
     "static/js/runtime-main.af38de8c.js",
     "static/js/2.db108b18.chunk.js",
     "static/css/main.1902de1a.chunk.css",
-    "static/js/main.5f35a065.chunk.js"
+    "static/js/main.748d6ed7.chunk.js"
   ]
 }
