@@ -2,7 +2,6 @@ import React from "react";
 import styles from "./DetailsDialog.module.css";
 
 const DetailsDialog = (props) => {
-  console.log(props);
   return (
     <div className={styles.madal_content}>
       <div>

@@ -13,10 +13,14 @@ const Table = (props) => {
       <li
         key={item.id}
         id={item.id}
-        className={styles.cells__item}
+        className={
+          props.isSelected
+            ? `${styles.cells__item} ${styles.cells__item__selected}`
+            : styles.cells__item
+        }
         onClick={
           filteredTable.length === 1
-            ? undefined
+            ? null
             : (e) => props.handleSelect(e.currentTarget.id)
         }
       >

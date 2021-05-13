@@ -11,11 +11,13 @@ const Review = (props) => {
       <Image src="images/hairbrush.jpg" />
       <Topic topic="Review booking details:" route="/schedule" display={true} />
       <Cells
+        isSelected={true}
         services={props.selectedService}
         handleSelect={props.handleSelect}
         route="/review"
       />
       <Table
+        isSelected={true}
         handleSelect={props.handleSelect}
         handleFilter={props.handleFilter}
         selectedDate={props.selectedDate}

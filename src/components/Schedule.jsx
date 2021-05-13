@@ -16,6 +16,7 @@ const Schedule = (props) => {
       />
       <Topic topic="Next Available Appointment:" route={"/"} display={true} />
       <Cells
+        isSelected={true}
         services={props.selectedService}
         handleSelect={props.handleSelect}
         route="/schedule"
