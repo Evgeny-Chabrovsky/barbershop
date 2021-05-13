@@ -7,6 +7,7 @@ import styles from "./Cells.module.css";
 
 const Cells = (props) => {
   const [clicked, setClicked] = useState(false);
+  //display DetailsDialog component
   const toggle = (index, e) => {
     e.preventDefault();
     if (clicked === index) {

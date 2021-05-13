@@ -30,13 +30,13 @@ class App extends Component {
       { id: 3, barber: "Avi", date: "Thursday, April 29th", time: "18:00" },
       { id: 4, barber: "Gabi", date: "Friday, April 30th", time: "12:00" },
       { id: 5, barber: "Gabi", date: "Friday, April 30th", time: "13:00" },
-      { id: 6, barber: "Hagai", date: "Saturday, May 1th", time: "11:00" },
-      { id: 7, barber: "Avi", date: "Saturday, May 1th", time: "12:00" },
-      { id: 8, barber: "Hagai", date: "Saturday, May 1th", time: "14:00" },
-      { id: 9, barber: "Avi", date: "Saturday, May 1th", time: "15:00" },
-      { id: 10, barber: "Gabi", date: "Saturday, May 1th", time: "15:00" },
-      { id: 11, barber: "Gabi", date: "Saturday, May 1th", time: "16:00" },
-      { id: 12, barber: "Avi", date: "Saturday, May 1th", time: "16:00" },
+      { id: 6, barber: "Hagai", date: "Saturday, May 1st", time: "11:00" },
+      { id: 7, barber: "Avi", date: "Saturday, May 1st", time: "12:00" },
+      { id: 8, barber: "Hagai", date: "Saturday, May 1st", time: "14:00" },
+      { id: 9, barber: "Avi", date: "Saturday, May 1st", time: "15:00" },
+      { id: 10, barber: "Gabi", date: "Saturday, May 1st", time: "15:00" },
+      { id: 11, barber: "Gabi", date: "Saturday, May 1st", time: "16:00" },
+      { id: 12, barber: "Avi", date: "Saturday, May 1st", time: "16:00" },
     ],
 
     barbers: [
@@ -47,25 +47,17 @@ class App extends Component {
     selectedService: [],
     selectedDate: [],
     itemsToShowDate: 4,
-    stepToShowDate: 43,
-    selectedBarber: "All",
+    stepToShowDate: 4,
+    selectedBarber: "",
   };
-  // componentDidMount() {
-  //   this.setState({
-  //     barbers: this.getBarbers(),
-  //   });
-  // }
-
-  // getBarbers() {
-  //   return [...new Set(this.state.table.map((i) => i.barber))];
-  // }
 
   handleDateShowMore = () => {
     let items = this.state.itemsToShowDate + this.state.stepToShowDate;
-    this.state.table.length <= items
-      ? this.setState({ itemsToShowDate: this.state.table.length })
-      : this.setState({ itemsToShowDate: items });
-    // console.log(this.state.itemsToShowDate);
+    this.setState(
+      this.state.table.length <= items
+        ? { itemsToShowDate: this.state.table.length }
+        : { itemsToShowDate: items }
+    );
   };
 
   handleSelectService = (id) => {
@@ -76,12 +68,12 @@ class App extends Component {
   };
 
   handleSelectBarber = (barber) => {
-    console.log(barber);
     this.setState({ selectedBarber: barber });
   };
 
   handleFilter = () => {
-    return this.state.selectedBarber === "All"
+    return this.state.selectedBarber === "All" ||
+      this.state.selectedBarber === ""
       ? this.state.table
       : this.state.table.filter((i) => i.barber === this.state.selectedBarber);
   };

@@ -45,7 +45,8 @@ const Table = (props) => {
     <ul>
       {tableItem}
 
-      {tableItem.length === 1 ? null : (
+      {tableItem.length === 1 ||
+      props.itemsToShowDate >= filteredTable.length ? null : (
         <li
           className={`${styles.cells__item} ${styles.show_more}`}
           onClick={() => props.handleDateShowMore()}
