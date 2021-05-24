@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/barbershop/static/css/main.97b304ff.chunk.css",
-    "main.js": "/barbershop/static/js/main.7dcc1dee.chunk.js",
-    "main.js.map": "/barbershop/static/js/main.7dcc1dee.chunk.js.map",
+    "main.css": "/barbershop/static/css/main.d83dd961.chunk.css",
+    "main.js": "/barbershop/static/js/main.c46e51ad.chunk.js",
+    "main.js.map": "/barbershop/static/js/main.c46e51ad.chunk.js.map",
     "runtime-main.js": "/barbershop/static/js/runtime-main.af38de8c.js",
     "runtime-main.js.map": "/barbershop/static/js/runtime-main.af38de8c.js.map",
-    "static/js/2.db108b18.chunk.js": "/barbershop/static/js/2.db108b18.chunk.js",
-    "static/js/2.db108b18.chunk.js.map": "/barbershop/static/js/2.db108b18.chunk.js.map",
+    "static/js/2.ee540377.chunk.js": "/barbershop/static/js/2.ee540377.chunk.js",
+    "static/js/2.ee540377.chunk.js.map": "/barbershop/static/js/2.ee540377.chunk.js.map",
     "index.html": "/barbershop/index.html",
-    "static/css/main.97b304ff.chunk.css.map": "/barbershop/static/css/main.97b304ff.chunk.css.map",
-    "static/js/2.db108b18.chunk.js.LICENSE.txt": "/barbershop/static/js/2.db108b18.chunk.js.LICENSE.txt",
+    "static/css/main.d83dd961.chunk.css.map": "/barbershop/static/css/main.d83dd961.chunk.css.map",
+    "static/js/2.ee540377.chunk.js.LICENSE.txt": "/barbershop/static/js/2.ee540377.chunk.js.LICENSE.txt",
     "static/media/barbershop.53247800.jpg": "/barbershop/static/media/barbershop.53247800.jpg",
     "static/media/haircut.0972b25d.jpg": "/barbershop/static/media/haircut.0972b25d.jpg",
     "static/media/kidscut.3c17c70c.jpg": "/barbershop/static/media/kidscut.3c17c70c.jpg",
@@ -18,8 +18,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.af38de8c.js",
-    "static/js/2.db108b18.chunk.js",
-    "static/css/main.97b304ff.chunk.css",
-    "static/js/main.7dcc1dee.chunk.js"
+    "static/js/2.ee540377.chunk.js",
+    "static/css/main.d83dd961.chunk.css",
+    "static/js/main.c46e51ad.chunk.js"
   ]
 }
