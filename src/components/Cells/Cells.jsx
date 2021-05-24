@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faQuestion } from "@fortawesome/free-solid-svg-icons";
+import { faInfoCircle } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
 import DetailsDialog from "../DetailsDialog/DetailsDialog";
 import styles from "./Cells.module.css";
@@ -35,7 +35,7 @@ const Cells = (props) => {
         <div className={styles.serviceName}>{service.title}</div>
         <div className={styles.price}>{service.price}$</div>
         <div className={styles.details} onClick={(e) => toggle(index, e)}>
-          <FontAwesomeIcon icon={faQuestion} className={styles.question} />
+          <FontAwesomeIcon icon={faInfoCircle} className={styles.question} />
         </div>
       </Link>
       {clicked === index ? <DetailsDialog image={service.image} /> : null}

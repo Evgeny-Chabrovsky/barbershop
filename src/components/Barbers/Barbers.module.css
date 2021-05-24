@@ -1,6 +1,6 @@
 .barbers {
   display: flex;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
   background-color: #fff;
   min-width: 320px;
@@ -21,7 +21,6 @@ select {
   cursor: pointer;
 }
 
-#available {
-  text-align: center;
-  margin: 30px auto 15px;
+.chooseBarber {
+  margin-left: 40px;
 }

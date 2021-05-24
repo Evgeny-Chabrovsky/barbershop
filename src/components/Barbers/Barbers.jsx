@@ -6,7 +6,7 @@ const Barbers = (props) => {
 
   return (
     <div className={styles.barbers}>
-      <p id={styles.selectBarber}>Choose Barber:</p>
+      <p className={styles.chooseBarber}>Choose Barber:</p>
       <form>
         <select
           id="barber"
